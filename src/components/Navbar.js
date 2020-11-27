@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { FaBars, FaHome, FaBookReader, FaCaretDown } from "react-icons/fa";
+import { FaBars, FaRibbon, FaBookReader, FaCaretDown } from "react-icons/fa";
 
 const Navbar = () => {
   const toggleVisibility = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
             <h3>
               {" "}
               <span className="icon homeicon">
-                <FaHome />
+                <FaRibbon />
               </span>{" "}
               SSH
             </h3>
@@ -52,10 +52,10 @@ const Navbar = () => {
           </span>
           <ul id="Vdropdownitem">
             <li>
-              <Link to='/signin'>sign in</Link>
+              <Link to="/signin">sign in</Link>
             </li>
             <li>
-              <Link to='/signin'>sign up</Link>
+              <Link to="/signin">sign up</Link>
             </li>
           </ul>
         </li>
@@ -75,16 +75,27 @@ const Navbar = () => {
             Blog
           </Link>
         </li>
-        <Link> <li className=""> Get therapy </li></Link>
-        <Link to='/report'><li className="">Report a case</li></Link>
+        <Link>
+          {" "}
+          <li className=""> Get therapy </li>
+        </Link>
+        <Link to="/report">
+          <li className="">Report a case</li>
+        </Link>
         <li className=" " id="Vdropdown">
           Vounteer{" "}
           <span>
             <FaCaretDown />
           </span>
           <ul id="Vdropdownitem">
-          <Link to='/signin'> <li>sign in</li></Link>
-          <Link to='/signin'> <li>sign up</li></Link>
+            <Link to="/signin">
+              {" "}
+              <li>sign in</li>
+            </Link>
+            <Link to="/signin">
+              {" "}
+              <li>sign up</li>
+            </Link>
           </ul>
         </li>
       </ul>
@@ -95,9 +106,8 @@ const Navbar = () => {
 const NavMenu = styled.nav`
   position: sticky;
   top: 0;
-  background-color: #13274f;
+  background-color:   rgb(185, 7, 7);
   z-index: 20;
-  margin-right:-2em;
   ul {
     list-style-type: none;
     margin: 0;
@@ -115,13 +125,13 @@ const NavMenu = styled.nav`
   }
   li h3 {
     margin-right: 3em;
-    font-size: xx-large;  
+    font-size: xx-large;
   }
-  li h3 >span{
-    color: yellow;
+  li h3 > span {
+    color: red;
   }
   li.menudropdown {
-    color: yellow;
+    color: white;
     font-size: x-large;
 
     display: none;
