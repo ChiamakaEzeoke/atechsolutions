@@ -63,17 +63,16 @@ const TopBlogPosts = () => {
 };
 
 const BlogSection = styled.section`
-  background-color: #a3c1ad;
+  background-color: white;
   padding: 1em 0.5em 0em 0.5em;
   margin: 0em 0em 0em 0em;
-  color: black;
+  color: white;
   font-size: large;
 
   .blogsubsection {
     margin: 2em;
   }
   .blogsubsection__posts {
-    background-color: #a3c1ad;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -85,18 +84,18 @@ const BlogSection = styled.section`
   .blogsubsection__header {
     text-align: center;
     margin-top: 3em;
-    color: #13274f;
+    color: rgb(185, 7, 7);
   }
   .blogsubsection__post {
     padding: 1em;
     font-size: medium;
     margin: 1em;
     width:30%;
-    background-color:yellow;
+    background-color:lightgrey;
   }
   .blogsubsection__postHeader {
     font-size: x-large;
-    color: #13274f;
+    color: rgb(185, 7, 7);
 
   }
   .blogsubsection__postFooter {
@@ -106,12 +105,12 @@ const BlogSection = styled.section`
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .blogsubsection__header {
       text-align: center;
-      margin-top: 7em;
+      margin-top: 2em;
     }
   }
   @media only screen and (max-width: 450px) {
     .blogsubsection {
-      margin: 2em -1em;
+      margin: 2em 0em;
     }
     .blogsubsection__posts {
      
