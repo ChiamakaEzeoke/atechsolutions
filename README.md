@@ -25,7 +25,7 @@ repo for saucecode hackathon
 
  * type ( npm install ) in your terminal in the file directory to set up on local machine 
  * type ( npm start ) in your terminal in the file directory to run the web app up on your local machine.
- * live demo at ( https://botanicalcoder.netlify.app )
+ * live demo at ( )
 
 ## Contact
 Created by team tech-solutions
