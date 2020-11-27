@@ -6,13 +6,17 @@ const Signin = () => {
   return (
     <Signinsection>
       <h2>WELCOME</h2>
-      <hr/>
+      <hr />
       <p>fill your data to enter</p>
       {isSignedin ? (
-        <form onSubmit={(e)=>{e.preventDefault()}}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
           <label htmlFor="user">
             USER <br />
-            <input type="text" placeholder="username" id='user' required/>
+            <input type="text" placeholder="username" id="user" required />
           </label>{" "}
           <br />
           <label htmlFor="password">
@@ -23,7 +27,11 @@ const Signin = () => {
           <input type="submit" value="Submit" id="submit" />
         </form>
       ) : (
-        <form onSubmit={(e)=>{e.preventDefault()}}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
           <label htmlFor="user">
             set username <br />
             <input type="text" placeholder="username" id="user" />
@@ -42,7 +50,8 @@ const Signin = () => {
           <label htmlFor="user">
             set bio: <br />
             <textarea id="bio"></textarea>
-          </label> <br></br>
+          </label>{" "}
+          <br></br>
           <input type="submit" value="SUBMIT" id="submit" />
         </form>
       )}
@@ -51,28 +60,33 @@ const Signin = () => {
 };
 
 const Signinsection = styled.section`
-padding:2em;
-font-size:large;
-h2{
-    text-align:center;
-    color:#13274f;
-    
-}
-p{
+  background-color: white;
+  padding: 2em;
+  font-size: large;
+  height: 100vh;
+  h2 {
+    text-align: center;
+    color: rgb(185, 7, 7);
+  }
+  p {
     margin: 0.5em;
-    text-align:center;
-}
-form{
-margin:0em auto;
-background-color:#13274f;
-color:white;
-padding:2em;
-}
-input{padding:0.5em;
-margin-top:0.5em;
-margin-bottom:0.5em;}
-#submit{
-    background-color:yellow;
-}
+    text-align: center;
+    color: #13274f;
+  }
+  form {
+    margin: 0em auto;
+    background-color: lightgrey;
+    color: #13274f;
+    padding: 2em;
+  }
+  input {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  #submit {
+    background-color: rgb(185, 7, 7);
+    color:white;
+  }
 `;
 export default Signin;
