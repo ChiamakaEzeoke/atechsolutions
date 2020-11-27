@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import image1 from "../images/carousel imgs/image1.jpg";
+import image1 from "../images/carousel imgs/image1.jpeg";
 import image2 from "../images/carousel imgs/image2.jpg";
-import image3 from "../images/carousel imgs/image3.jpg";
+import image3 from "../images/carousel imgs/image3.jpeg";
 
 const Carousel = () => {
   var slideIndex = 0;
   const showSlides = () => {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    
 
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
@@ -19,31 +18,29 @@ const Carousel = () => {
     if (slideIndex > slides.length) {
       slideIndex = 1;
     }
-   
-    
-    if (slides[slideIndex - 1]!==undefined){
+
+    if (slides[slideIndex - 1] !== undefined) {
       slides[slideIndex - 1].style.display = "block";
- 
+    } else {
+      return;
     }
-    else{ return ;}
-    setTimeout(showSlides, 5000); 
+    setTimeout(showSlides, 10000);
   };
-useEffect(showSlides)
+  useEffect(showSlides);
   return (
     <CarouselSection>
-  
       <div className="slideshow-container" onLoad={showSlides}>
         <div className="mySlides fade">
           <img src={image1} alt="" />
           <div className="text">
-            IT IS NOT NORMAL TO REQUEST SEX FROM STUDENTS
+            <h4> WE STAND WITH YOU</h4>
           </div>
         </div>
 
         <div className="mySlides fade">
           <img src={image2} alt="" />
           <div className="text">
-            IT IS NOT NORMAL TO TOUCH A STUDENT INAPPROPRIATELY
+            <h4> WE STAND WITH YOU</h4>
           </div>
         </div>
 
@@ -51,7 +48,7 @@ useEffect(showSlides)
           <img src={image3} alt="" />
           <div className="text">
             {" "}
-            IT IS NOT NORMAL TO SEND NUDE PICTURES TO A STUDENT
+            <h4> WE STAND WITH YOU</h4>
           </div>
         </div>
       </div>
@@ -61,46 +58,49 @@ useEffect(showSlides)
 };
 
 const CarouselSection = styled.section`
-  margin-top: -17em;
-  position: static;
-  top: -10;
+  margin: 0em;
   z-index: 9;
 
   .mySlides {
     display: none;
   }
   img {
-    margin-top: -3em;
+    margin-top: 0em;
     vertical-align: middle;
-    max-height: 30vh;
+    height: 70vh;
     border: 2px dotted white;
-    border-radius: 100%;
-    
+    width: 100%;
   }
   color: grey;
   /* Slideshow container */
   .slideshow-container {
-    height: 30vh;
-    max-width: 80vw;
+    height: 60vh;
+    width: 100%;
     position: relative;
-    margin: auto;
+    margin: 0em;
   }
 
   /* Caption text */
   .text {
     color: rgb(207, 0, 0);
+    background-color: white;
     font-size: 2em;
     text-spacing: 1.5;
     line-height: 1.5;
     padding: 0.2em 1em;
     position: absolute;
-    margin-top: 0em;
-    top: 10;
+    margin: 0em auto;
+
+    bottom: 10;
     width: 100%;
+
     text-align: center;
     z-index: 9;
   }
-
+  .text h4 {
+    color: white;
+    background-color: #13274f;
+  }
   /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
@@ -128,13 +128,16 @@ const CarouselSection = styled.section`
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    margin-top: -29em;
+    margin-top: 0em;
   }
 
   /* On smaller screens, decrease text size */
   @media only screen and (max-width: 550px) {
     .text {
       font-size: 1em;
+    }
+    img {
+      max-width: 100%;
     }
   }
 `;
